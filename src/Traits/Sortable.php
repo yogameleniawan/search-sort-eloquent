@@ -14,12 +14,8 @@ trait Sortable
      * @param \Illuminate\Http\Request $request
      * @return void
      */
-    public function scopeSort(Builder $query, Request $request)
+    public function scopeSort(Builder $query, $sort_by = 'updated_at', $sort_order = 'DESC')
     {
-        if ($request->has('sort_by') && $request->has('sort_order')) {
-            $query->orderBy($request->input('sort_by'), $request->input('sort_order'));
-        } else {
-            $query->orderBy('updated_at', 'DESC');
-        }
+        $query->orderBy($sort_by, $sort_order);
     }
 }
