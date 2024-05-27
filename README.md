@@ -17,7 +17,7 @@ composer require yogameleniawan/search-sort-eloquent
 
 Use Searchable trait to your model
 
-```
+```php
 use Yogameleniawan\SearchSortEloquent\Traits\Searchable;
 
 class User extends Model {
@@ -29,7 +29,7 @@ class User extends Model {
 
 Use search function to your eloquent model
 
-```
+```php
 
 class UserController extends Controller {
     
@@ -49,7 +49,7 @@ class UserController extends Controller {
 
 Use Sortable trait to your model
 
-```
+```php
 use Yogameleniawan\SearchSortEloquent\Traits\Sortable;
 
 class User extends Model {
@@ -61,7 +61,7 @@ class User extends Model {
 
 Use sort function to your eloquent model
 
-```
+```php
 
 class UserController extends Controller {
     
@@ -76,3 +76,16 @@ class UserController extends Controller {
 }
 
 ```
+
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Credits
+
+- [Yoga Meleniawan Pamungkas](https://github.com/yogameleniawan)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
