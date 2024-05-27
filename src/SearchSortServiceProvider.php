@@ -1,6 +1,6 @@
 <?php
 
-namespace YourVendor\YourPackage;
+namespace Yogameleniawan\SearchSortEloquent;
 
 use Illuminate\Support\ServiceProvider;
 
