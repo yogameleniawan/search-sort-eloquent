@@ -1,0 +1,18 @@
+{
+    "name": "yogameleniawan/search-sort-eloquent",
+    "description": "Searching & Sorting Column Eloquent Model",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Yogameleniawan\\SearchSortEloquent\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yoga Meleniawan Pamungkas",
+            "email": "64576201+yogameleniawan@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
