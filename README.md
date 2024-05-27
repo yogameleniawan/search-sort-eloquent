@@ -74,6 +74,28 @@ class UserController extends Controller {
 
 ```
 
+#### Combine Searchable & Sortable Trait
+
+We can also combine these traits to eloquent model
+```php
+
+class UserController extends Controller {
+    
+    public function sort(Request $request) {
+        $user = User::search(
+                keyword: $request->keyword,
+                columns: ["id", "name", "email"],
+            )->sort(
+                sort_by: $request->sort_by,
+                sort_order: $request->sort_order
+            )->get();
+
+        dd($user);
+    }
+}
+
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
