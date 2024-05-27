@@ -1,6 +1,6 @@
 <?php
 
-namespace Yogameleniawan\SearchSortEloquent;
+namespace Yogameleniawan\SearchSortEloquent\Traits;
 
 use Illuminate\Contracts\Database\Query\Builder;
 use Illuminate\Http\Request;
