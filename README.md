@@ -8,6 +8,33 @@
 composer require yogameleniawan/search-sort-eloquent
 ```
 
+### Add Dependency
+
+## Laravel 11
+
+add provider to files `bootstrap/providers.php`
+
+```php
+<?php
+
+return [
+    App\Providers\AppServiceProvider::class,
+    ...
+    Yogameleniawan\SearchSortEloquent\SearchSortServiceProvider::class, // add this line
+];
+
+```
+
+## Laravel 10, 9, 8 >
+
+add provider to files `config/app.php`
+```php
+    'providers' => [
+        ...
+        Yogameleniawan\SearchSortEloquent\SearchSortServiceProvider::class, // add this line
+    ]
+```
+
 ### How to use
 
 #### Searchable trait
