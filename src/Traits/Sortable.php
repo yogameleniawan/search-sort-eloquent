@@ -11,7 +11,8 @@ trait Sortable
      * Local Scope query sort semua kolom.
      *
      * @param \Illuminate\Contracts\Database\Query\Builder $query
-     * @param \Illuminate\Http\Request $request
+     * @param string $sort_by = 'updated_at'
+     * @param string $sort_order = 'DESC'
      * @return void
      */
     public function scopeSort(Builder $query, $sort_by = 'updated_at', $sort_order = 'DESC')
