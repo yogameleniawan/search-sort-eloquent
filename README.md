@@ -8,6 +8,33 @@
 composer require yogameleniawan/search-sort-eloquent
 ```
 
+### Add Dependency
+
+## Laravel 11
+
+add provider to files `bootstrap/providers.php`
+
+```php
+<?php
+
+return [
+    App\Providers\AppServiceProvider::class,
+    ...
+    Yogameleniawan\SearchSortEloquent\SearchSortServiceProvider::class, // add this line
+];
+
+```
+
+## Laravel 10, 9, 8 >
+
+add provider to files `config/app.php`
+```php
+    'providers' => [
+        ...
+        Yogameleniawan\SearchSortEloquent\SearchSortServiceProvider::class, // add this line
+    ]
+```
+
 ### How to use
 
 #### Searchable trait
@@ -64,6 +91,28 @@ class UserController extends Controller {
     
     public function sort(Request $request) {
         $user = User::sort(
+                sort_by: $request->sort_by,
+                sort_order: $request->sort_order
+            )->get();
+
+        dd($user);
+    }
+}
+
+```
+
+#### Combine Searchable & Sortable Trait
+
+We can also combine these traits to eloquent model
+```php
+
+class UserController extends Controller {
+    
+    public function sort(Request $request) {
+        $user = User::search(
+                keyword: $request->keyword,
+                columns: ["id", "name", "email"],
+            )->sort(
                 sort_by: $request->sort_by,
                 sort_order: $request->sort_order
             )->get();
