@@ -69,6 +69,12 @@ class UserController extends Controller {
 
 ```
 
+
+Query parameters: 
+```
+localhost:8080/api/users?keyword=Yoga
+```
+
 #### Sortable trait
 
 Use Sortable trait to your model
@@ -101,6 +107,11 @@ class UserController extends Controller {
 
 ```
 
+Query parameters: 
+```
+localhost:8080/api/users?sort_by=name&sort_order=ASC
+```
+
 #### Combine Searchable & Sortable Trait
 
 We can also combine these traits to eloquent model
@@ -121,6 +132,11 @@ class UserController extends Controller {
     }
 }
 
+```
+
+Query parameters: 
+```
+localhost:8080/api/users?keyword=Yoga&sort_by=name&sort_order=ASC
 ```
 
 ## Changelog
